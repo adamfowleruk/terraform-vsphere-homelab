@@ -1,0 +1,9 @@
+# Visual Studio Code dev specific settings
+.vscode
+
+# Mac files
+.DS_Store
+
+# Terraform state and temporary files
+*.tfstate*
+.terraform*
