@@ -19,11 +19,16 @@ provider "vsphere" {
   allow_unverified_ssl = var.vsphere_insecure
 }
 
+# TODO prereq DNS entries in pfsense, and VLAN routing rules
+
+# Create a set of Nested ESXi nodes, and a vCenter VM on the first node
 module "esxi-cluster" {
   source = "../esxi-cluster"
 
-  # Map input variables
+  # TODO Map input variables rather than accept the defaults
 }
+
+# TODO Now configure the nested vCenter VM as a HA cluster, and network layout
 
 
 
